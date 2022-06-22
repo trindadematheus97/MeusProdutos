@@ -1,10 +1,6 @@
 ﻿using DevIO.Business.Core.Models;
 using DevIO.Business.Models.Fornecedores;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIO.Business.Models.Produtos
 {
@@ -25,5 +21,7 @@ namespace DevIO.Business.Models.Produtos
         public bool Ativo { get; set; }
 
         public Fornecedor Fornecedor { get; set;  }
+
+        public Guid FornecedorId { get; set; }
     }
 }
