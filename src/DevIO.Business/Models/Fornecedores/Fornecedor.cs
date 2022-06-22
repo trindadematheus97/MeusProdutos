@@ -12,7 +12,9 @@ namespace DevIO.Business.Models.Fornecedores
         public Endereco Endereco { get; set; }
         public bool Ativo { get; set; }
 
-        public ICollection<Produto> Produtos { get; set; }
+        public ICollection<Produto> Produto { get; set; }
+
+        
 
 
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DevIO.Business.Models.Produtos
 {
-    internal class Produto : Entity
+    public class Produto : Entity
     {
         public Guid Id { get; set;  }
 
@@ -24,6 +24,6 @@ namespace DevIO.Business.Models.Produtos
 
         public bool Ativo { get; set; }
 
-        public Fornecedor fornecedor { get; set;  }
+        public Fornecedor Fornecedor { get; set;  }
     }
 }
