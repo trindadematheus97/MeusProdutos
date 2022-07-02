@@ -23,7 +23,7 @@ namespace DevIO.Infra.Data.Mappings
                 .IsFixedLength();
             
 
-            HasRequired(f => f.Endereco)
+            HasRequired(f => f.Produtos)
                 .WithRequiredPrincipal(e => (Fornecedor)e.Fornecedor);
 
             ToTable("Fornecedores");
