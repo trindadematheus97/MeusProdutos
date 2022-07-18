@@ -14,6 +14,6 @@ namespace DevIO.Business.Models.Fornecedores.Services
 
         Task Remover(Guid id);
 
-        Task AtualizarEndereco(Endereco fornecedor);
+        Task AtualizarEndereco(Endereco endereco);
     }
 }

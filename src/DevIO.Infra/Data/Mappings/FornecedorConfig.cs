@@ -5,7 +5,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace DevIO.Infra.Data.Mappings
 {
-    internal class FornecedorConfig : EntityTypeConfiguration<Fornecedor>
+    public class FornecedorConfig : EntityTypeConfiguration<Fornecedor>
     {
         public FornecedorConfig()
         {
@@ -19,11 +19,11 @@ namespace DevIO.Infra.Data.Mappings
                 .IsRequired()
                 .HasMaxLength(14)
                 .HasColumnAnnotation("IX_Documento",
-                new IndexAnnotation(new IndexAttribute { IsUnique = true }))
-                .IsFixedLength();
+                new IndexAnnotation(new IndexAttribute { IsUnique = true }));
+                
             
 
-            HasRequired(f => f.Produtos)
+            HasRequired(f => f.Endereco)
                 .WithRequiredPrincipal(e => (Fornecedor)e.Fornecedor);
 
             ToTable("Fornecedores");

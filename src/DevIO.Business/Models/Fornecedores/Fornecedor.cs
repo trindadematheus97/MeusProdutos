@@ -10,10 +10,10 @@ namespace DevIO.Business.Models.Fornecedores
         public string Nome { get; set; }
         public string Documento { get; set; }
         public TipoFornecedor TipoFornecedor { get; set; }
-        public Endereco Produtos { get; set; }
+        public Endereco Endereco { get; set; }
         public bool Ativo { get; set; }
 
+        public ICollection<Produto> Produtos { get; set; }
         public ICollection<Produto> Produto { get; set; }
-        public object Endereco { get; internal set; }
     }
 }
