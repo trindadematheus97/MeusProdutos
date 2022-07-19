@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DevIO.AppMvc.ViewModels;
 using DevIO.Business.Models.Produtos;
+using DevIO.Business.Models.Produtos.Services;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,13 +14,18 @@ namespace DevIO.AppMvc.Controllers
     public class ProdutosController : Controller
     {
         private readonly IProdutoRepository _produtoRepository;
-        private readonly IProdutoRepository _produtoService;
+        private readonly IProdutoService _produtoService;
         private readonly IMapper _mapper;
         
 
-        public ProdutosController()
+        public ProdutosController(IProdutoRepository produtoRepository,
+                                  IProdutoService produtoService,
+                                  IMapper mapper)
         {
-           
+            _produtoRepository = produtoRepository;
+            _produtoService = produtoService;
+            _mapper = mapper;
+
         }
 
         [Route("lista-de-produtos")]
