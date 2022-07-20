@@ -7,6 +7,8 @@ namespace DevIO.Infra.Data.Mappings
     {
         public ProdutoConfig()
         {
+            ToTable("Produtos");
+
             HasKey(p => p.Id);
 
             Property(p => p.Nome)
@@ -24,6 +26,7 @@ namespace DevIO.Infra.Data.Mappings
             HasRequired(p => p.Fornecedor)
                 .WithMany(f => f.Produto)
                 .HasForeignKey(p => p.FornecedorId);
+
 
         }
 

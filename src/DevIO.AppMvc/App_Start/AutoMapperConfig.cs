@@ -26,17 +26,18 @@ namespace DevIO.AppMvc.App_Start
                   }
               });
 
-    }
-
-    public class AutoMapperProfile : Profile
-    {
-        public AutoMapperProfile()
-        {
-            CreateMap<Fornecedor, FornecedorViewModel>().ReverseMap();
-            CreateMap<Endereco, EnderecoViewModel>().ReverseMap();
-            CreateMap<Produto, ProdutoViewModel>().ReverseMap();
-
         }
 
+        public class AutoMapperProfile : Profile
+        {
+            public AutoMapperProfile()
+            {
+                CreateMap<Fornecedor, FornecedorViewModel>().ReverseMap();
+                CreateMap<Endereco, EnderecoViewModel>().ReverseMap();
+                CreateMap<Produto, ProdutoViewModel>().ReverseMap();
+
+            }
+
+        }
     }
 }
