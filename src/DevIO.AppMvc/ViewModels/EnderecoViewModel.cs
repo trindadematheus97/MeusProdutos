@@ -53,11 +53,5 @@ namespace DevIO.AppMvc.ViewModels
 
 
 
-       while (alive)
-	{
-        Eat();
-        Sleep();
-        Coffe();
-        ode()
-	}
+ 
  

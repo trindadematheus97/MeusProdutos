@@ -4,8 +4,6 @@ using DevIO.Business.Models.Produtos;
 using DevIO.Business.Models.Produtos.Services;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -92,7 +90,7 @@ namespace DevIO.AppMvc.Controllers
             if (ModelState.IsValid)
             {
                 await _produtoService.Atualizar(_mapper.Map<Produto>(produtoViewModel));
-                await db.SaveChangesAsync();
+                
                 return RedirectToAction("Index");
             }
             return View(produtoViewModel);

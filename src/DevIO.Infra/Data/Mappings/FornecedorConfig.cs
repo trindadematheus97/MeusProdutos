@@ -7,8 +7,10 @@ namespace DevIO.Infra.Data.Mappings
 {
     public class FornecedorConfig : EntityTypeConfiguration<Fornecedor>
     {
-        public FornecedorConfig()
+        internal FornecedorConfig()
         {
+            ToTable("Fornecedores");
+
             HasKey(f => f.Id);
 
             Property(f => f.Nome)
@@ -20,8 +22,6 @@ namespace DevIO.Infra.Data.Mappings
                 .HasMaxLength(14)
                 .HasColumnAnnotation("IX_Documento",
                 new IndexAnnotation(new IndexAttribute { IsUnique = true }));
-                
-            
 
             HasRequired(f => f.Endereco)
                 .WithRequiredPrincipal(e => (Fornecedor)e.Fornecedor);

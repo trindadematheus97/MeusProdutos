@@ -13,6 +13,8 @@ namespace DevIO.Infra.Data.Mappings
 
         public EnderecoConfig()
         {
+            ToTable("Enderecos");
+
             HasKey(x => x.Id);
 
             Property(c => c.Logradouro)
