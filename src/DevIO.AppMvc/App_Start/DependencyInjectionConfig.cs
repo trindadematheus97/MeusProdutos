@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using DevIO.AppMvc.App_Start;
 using DevIO.Business.Core.Notificacoes;
 using DevIO.Business.Models.Fornecedores;
+using DevIO.Business.Models.Fornecedores.Services;
 using DevIO.Business.Models.Produtos;
 using DevIO.Business.Models.Produtos.Services;
 using DevIO.Infra.Data.Context;
@@ -38,7 +39,9 @@ namespace DevIO.AppMvc
             container.Register<IProdutoRepository, ProdutoRepository>(Lifestyle.Scoped);
             container.Register<IProdutoService, ProdutoService>(Lifestyle.Scoped);
             container.Register<IFornecedorRepository, FornecedorRepository>(Lifestyle.Scoped);
+            container.Register<IFornecedorService, FornecedorService>(Lifestyle.Scoped);
             container.Register<INotificador, Notificador>(Lifestyle.Scoped);
+            container.Register<IEnderecoRepository, EnderecoRepository>(Lifestyle.Scoped);
 
             container.RegisterSingleton(() => AutoMapperConfig.GetMapperConfiguration().CreateMapper(container.GetInstance));
 
