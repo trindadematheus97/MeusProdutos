@@ -8,12 +8,10 @@ namespace DevIO.Infra.Data.Context
 {
     public class MeuDbContext : DbContext
     {
-
         public MeuDbContext() : base("DefaultConnection")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
-
         }
 
         public DbSet<Produto> Produtos { get; set; }
